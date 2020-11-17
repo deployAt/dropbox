@@ -11,11 +11,6 @@ module.exports = {
       network_id: '*',
       skipDryRun: true,
     },
-    test: {
-      host: '127.0.0.1',
-      port: 8777,
-      network_id: 777,
-    },
     kovan: {
       provider: function () {
         return new HDWalletProvider(PRIVATE_KEY_KOVAN, 'https://kovan.infura.io/v3/' + INFURA_PROJECT_ID)
@@ -25,9 +20,6 @@ module.exports = {
     },
   },
   contracts_build_directory: './src/abis/',
-  mocha: {
-    enableTimeouts: false,
-  },
   compilers: {
     solc: {
       version: '0.6.6',
